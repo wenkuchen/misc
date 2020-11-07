@@ -18,3 +18,5 @@ feGaussianBlur 應該算是 SVG filter 裏頭最簡單的濾鏡，
 https://youtu.be/bm6tkPzDObY
 
 Introduction to SVG Filters
+
+This is a good Tutorial for using svg 
