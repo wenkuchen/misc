@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Gooey Menu</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="menu">
+		<div class="item open-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<div class="item"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+		<div class="item"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+		<div class="item"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+		<div class="item"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+		<div class="item"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+		<div class="item"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+		<div class="item close-menu"><i class="fa fa-times" aria-hidden="true"></i></div>
+	</div>
+
+	<svg>
+	    <defs>
+	        <filter id='goo'>
+	            <feGaussianBlur in='SourceGraphic' stdDeviation='8' result='blur' />
+	            <feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7' result='goo' />
+	            <feBlend in='SourceGraphic' in2='goo' />
+	        </filter>
+	    </defs>
+	</svg>
+
+	<script>
+		let menu = document.querySelector('.menu'),
+		 isOpened = false;
+
+		 menu.addEventListener('click', function(){
+		 	if(isOpened){
+		 		menu.classList.remove('opened');
+		 	} else {
+		 		menu.classList.add('opened');
+		 	}
+		 	isOpened = !isOpened;
+		 });
+	</script>
+	<div>
+		
+	</div>
+</body>
+
+</html>
